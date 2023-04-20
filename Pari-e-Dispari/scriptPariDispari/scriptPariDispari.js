@@ -13,14 +13,18 @@
 // 2. Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.
 
 let sceltaUtente = prompt('Pari o dispari?').toLowerCase();
+console.log(sceltaUtente);
+
 let numeroUtente = parseInt(prompt('Inserisci numero')); //da 1 a 5
+console.log(numeroUtente);
 
 // chiedi numero a cpu 
 let numeroCPU = Math.floor(Math.random() * 5) + 1;
+console.log(numeroCPU)
 
 // somma i due numeri
 let somma = numeroUtente + numeroCPU;
-
+console.log(somma)
 
 // invoco funzione checkParidDispari. Se somma equivale a pari, dimmi che è pari, altrimenti dispari
 let esito = checkPariDispari(somma);
@@ -28,8 +32,9 @@ let esito = checkPariDispari(somma);
 function checkPariDispari(number) {
     if (number % 2 === 0) {
         return 'pari'
-    } else
+    } else {
         return 'dispari'
+    }
 }
 
 // in conclusione confronta la scelta utente con valore restituito da checkParidDispari e stabilisci vincitore
